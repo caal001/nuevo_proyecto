@@ -122,7 +122,7 @@ class cars_post_type {
                 'ID',
             ],
         ]);
-
+        
         $editors = $user_query->get_results();
 
         if( ! empty( $editors ) ) {
@@ -145,7 +145,7 @@ class cars_post_type {
             echo '<p>No editor found</p>';
         }
 
-        //  @TODO AGREGAR EL RESET
+        wp_reset_postdata();
     }
 }
 

@@ -1,5 +1,7 @@
 <?php
 require(get_stylesheet_directory().'/cars-post-type.php');
+require(get_stylesheet_directory().'/news-post-type.php');
+
 
 
 add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
@@ -14,6 +16,7 @@ function my_theme_enqueue_styles() {
         array( $parenthandle ),
         $theme->get('Version')
     );
+    
 }
 
 

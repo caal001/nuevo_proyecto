@@ -27,7 +27,7 @@ get_header(); ?>
 			while ( have_posts() ) :
 				the_post();
 
-				get_template_part( 'template-parts/page/content', 'page-news' );
+				get_template_part( 'template-parts/post/content', 'template-new' );
 
 				// If comments are open or we have at least one comment, load up the comment template.
 				if ( comments_open() || get_comments_number() ) :
@@ -41,26 +41,7 @@ get_header(); ?>
 	</div><!-- #primary -->
 </div><!-- .wrap -->
 <div>
-	<?php	
-	$args = [ 'post_type' => 'post'];
-	$query = new WP_Query( $args );
-		while ( $query->have_posts() ) {
-			$query->the_post();
-			echo get_the_title();
-			echo get_the_ID();
-			//echo get_the_name();
-
-			}
-
-	wp_reset_postdata();	
 	
-		
-	/*echo '<pre>';
-	print_r($query);
-	echo '</pre>';*/
-		
-
-	?>
 </div>
 	
 
